@@ -1,5 +1,6 @@
 package com.serheev.datainfoservice.service;
 
+import com.serheev.datainfoservice.model.Data;
 import com.serheev.datainfoservice.model.MeasurementType;
 import com.serheev.datainfoservice.model.Summary;
 import com.serheev.datainfoservice.model.SummaryType;
@@ -28,6 +29,11 @@ public class SummaryServiceImpl implements SummaryService {
                         summaryTypes == null ? Set.of(SummaryType.values()) : summaryTypes
                 )
                 .orElseThrow(SensorNotFoundException::new);
+    }
+
+    @Override
+    public void handle(Data data) {
+        summaryRepository.handle(data);
     }
 
 }

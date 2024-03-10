@@ -13,6 +13,7 @@ import java.util.Map;
 @Setter
 @ToString
 public class Summary {
+
     private long sensorId;
     private Map<MeasurementType, List<SummaryEntry>> values;
 
@@ -35,5 +36,6 @@ public class Summary {
     public static class SummaryEntry {
         private SummaryType type;
         private double value;
+        private long counter;
     }
 }

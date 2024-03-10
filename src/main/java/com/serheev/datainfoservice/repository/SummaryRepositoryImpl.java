@@ -1,6 +1,7 @@
 package com.serheev.datainfoservice.repository;
 
 import com.serheev.datainfoservice.config.RedisSchema;
+import com.serheev.datainfoservice.model.Data;
 import com.serheev.datainfoservice.model.MeasurementType;
 import com.serheev.datainfoservice.model.Summary;
 import com.serheev.datainfoservice.model.SummaryType;
@@ -54,6 +55,11 @@ public class SummaryRepositoryImpl implements SummaryRepository {
                 );
             }
         }
+    }
+
+    @Override
+    public void handle(Data data) {
+
     }
 
     private Optional<Summary> getSummary(
